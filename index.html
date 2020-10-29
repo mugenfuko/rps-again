@@ -29,7 +29,6 @@ function playRound(playerSelection, computerSelection) {
     const win = `Round ${rounds}: You win! ${playerSelect} beats ${computerSelect}.`;
     const loss = `Round ${rounds}: You lose! ${computerSelect} beats ${playerSelect}.`;
     const tie = `Round ${rounds}: It\'s a tie!`;
-    let result;
     switch (playerSelect) {
         case 'Rock':
             if (computerSelect == 'Rock') {
@@ -74,7 +73,8 @@ function playRound(playerSelection, computerSelection) {
             }
             break;
         default:
-            return 'That is a forbidden move.';
+            console.log('That is a forbidden move.');
+            playRound(playerSelection, computerSelection)
             break;
     }
 }
