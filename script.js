@@ -4,6 +4,7 @@ function playGame() {
     losses = 0;
     playerScore.textContent = wins;
     computerScore.textContent = losses;
+    results.textContent = '';
 
     buttons.textContent = '';
     const newRockButton = document.createElement('button');
